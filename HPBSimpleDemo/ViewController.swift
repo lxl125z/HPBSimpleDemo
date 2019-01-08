@@ -14,6 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    @IBAction func authorizedLoginClick(_ sender: UIButton) {
+       HPBWalletApi.registerAppURLSchemes("HPBSimpleDemo")
+        let reqModel = HPBWalletBaseReq()
+        HPBWalletApi.sendReq(reqModel)
+    }
+    
 
 }
 
